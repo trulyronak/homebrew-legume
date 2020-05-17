@@ -5,10 +5,9 @@ jobs:
         steps:
           - uses: actions/checkout@master
           - uses: actions/setup-node@v1
-          - name: Download NPM Formula
-            run: npm install -g legume
-                 brew install zmwangx/npm-noob/noob &&
-                 noob legume > Formula/legume.rb
+          - run: npm install -g legume
+          - run: brew install zmwangx/npm-noob/noob
+          - run: noob legume > Formula/legume.rb
           - name: Commit files
             run: git config --local user.email "action@github.com"
                  git config --local user.name "GitHub Action"
