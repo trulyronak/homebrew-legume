@@ -3,9 +3,9 @@ require "language/node"
 class Legume < Formula
   desc "Professor Copperfield's Miracle Legumes will help you do anything"
   homepage "https://github.com/trulyronak/legume"
-  url "https://registry.npmjs.org/legume/-/legume-1.0.0.tgz"
-  version "1.0.0"
-  sha256 "14e7f02ce12bdbbb78834ef22e6597356973333e3770093beed64c598cde4706"
+  url "https://registry.npmjs.org/legume/-/legume-1.4.0.tgz"
+  version "1.4.0"
+  sha256 "0db9aced7cd0eb73c642440fc2e079321747e7a6cf87cb7ef7838dc66eff588e"
 
   depends_on "node"
 
