@@ -8,10 +8,9 @@ jobs:
           - run: npm install -g legume
           - run: brew install zmwangx/npm-noob/noob
           - run: noob legume > Formula/legume.rb
-          - name: Commit files
-            run: git config --local user.email "action@github.com"
-                 git config --local user.name "GitHub Action"
-                 git commit -m "Updated Formula" -a
+          - run: git config --local user.email "action@github.com"
+          - run: git config --local user.name "GitHub Action"
+          - run: git commit -m "Updated Formula" -a
           - name: Push changes
             uses: ad-m/github-push-action@master
             with:
