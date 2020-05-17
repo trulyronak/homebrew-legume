@@ -7,8 +7,7 @@ jobs:
           - uses: actions/setup-node@v1
           - name: Download NPM Formula
             run: npm install -g legume
-          - name: Regenerate formula
-            run: brew install zmwangx/npm-noob/noob
+                 brew install zmwangx/npm-noob/noob &&
                  noob legume > Formula/legume.rb
           - name: Commit files
             run: git config --local user.email "action@github.com"
