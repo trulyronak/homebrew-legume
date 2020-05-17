@@ -5,15 +5,13 @@ jobs:
         steps:
           - uses: actions/checkout@master
           - name: Regenerate formula
-              run: |
-              brew install zmwangx/npm-noob/noob
-              noob @trulyronak/legume > Formula/legume.rb
+            run: brew install zmwangx/npm-noob/noob
+                 noob @trulyronak/legume > Formula/legume.rb
           - name: Commit files
-              run: |
-              git config --local user.email "action@github.com"
-              git config --local user.name "GitHub Action"
-              git commit -m "Updated Formula" -a
+            run: git config --local user.email "action@github.com"
+                 git config --local user.name "GitHub Action"
+                 git commit -m "Updated Formula" -a
           - name: Push changes
-              uses: ad-m/github-push-action@master
-              with:
-              github_token: ${{ secrets.GITHUB_TOKEN }}
+            uses: ad-m/github-push-action@master
+            with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
