@@ -4,9 +4,12 @@ jobs:
         runs-on: macos-latest
         steps:
           - uses: actions/checkout@master
+          - uses: actions/setup-node@v1
+          - name: Download NPM Formula
+            run: npm install -g legume
           - name: Regenerate formula
             run: brew install zmwangx/npm-noob/noob
-                 noob @trulyronak/legume > Formula/legume.rb
+                 noob legume > Formula/legume.rb
           - name: Commit files
             run: git config --local user.email "action@github.com"
                  git config --local user.name "GitHub Action"
